@@ -1,0 +1,13 @@
+[Unit]
+Description=Blink LED slow, then fast
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sel
+ExecStart=/usr/bin/python3 /home/sel/blink2.py
+ExecStop=/usr/bin/python3 -c "import RPi.GPIO as GPIO; GPIO.cleanup(); import runpy; runpy.run_path('/home/sel/blink.py')"
+User=sel
+#Service padrão, indicando blink2 que pisca lento para iniciar, e depois blink fast em blink.py ao exec.stop. Foi feito escritas adicionais em execstop para fazer o blink2.py parar e funcionar o blink.py.
+[Install]
+WantedBy=multi-user.target
