@@ -1,0 +1,5 @@
+commit 40990f0b6f30e124778fcf88dc5545ee8ebb391c
+Author: pessoadoalem <pedrokzan@gmail.com>
+Date:   Wed Dec 10 03:17:00 2025 -0300
+
+    Adiciona códigos da Prática 5 Parte 1 e README
